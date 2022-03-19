@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'FANBaseConfig_Example' do
+  pod 'FANBaseConfig', :path => '../'
+
+  target 'FANBaseConfig_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

@@ -1,0 +1,16 @@
+PODS:
+  - FANBaseConfig (0.1.0)
+
+DEPENDENCIES:
+  - FANBaseConfig (from `../`)
+
+EXTERNAL SOURCES:
+  FANBaseConfig:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FANBaseConfig: 876de05e48d1f9b30097e01c3b64cb6a506c4a5a
+
+PODFILE CHECKSUM: 5809405a234ae3cfea658f2557b16af83a41b529
+
+COCOAPODS: 1.10.2
