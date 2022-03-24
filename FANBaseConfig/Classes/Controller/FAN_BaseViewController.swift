@@ -7,19 +7,37 @@
 
 import UIKit
 
-class FAN_BaseViewController: UIViewController {
+/**
+ open : module以外可以访问、重写或者继承。
+ public: module以外可以访问、不能重写或者继承。
+ internal(默认)：当前module可用
+ fileprivate: 当前file可见
+ private：当前声明区域可见
+ https://blog.csdn.net/weixin_46681371/article/details/122069597
+ */
+
+open class FAN_BaseViewController: UIViewController {
 
     var nvColor = RandomColor()
     
-   
-
-    override func viewDidLoad() {
+//    public init() {
+//        super.init()
+//        
+//        self.initData()
+//        self.initNotification()
+//    }
+    
+//    required public init?(coder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
+    
+    open override func viewDidLoad() {
         super.viewDidLoad()
         addCustomView()
     }
     
   /// 非必要情况不要自定义这个方法
-    func addCustomView() {
+    open func addCustomView() {
         // 1.隐藏系统的导航栏
         hidSystemNavBar()
         
@@ -58,11 +76,23 @@ class FAN_BaseViewController: UIViewController {
         self.nvMidTitleLabel.frame = CGRect(x: 0, y: 0, width: self.nvMidBarView.width, height: self.nvMidBarView.height)
     }
     
-    func addChildView() {
+    open func addChildView() {
         
       
         
     }
+    
+    open func initData() {
+        
+        
+    }
+    
+    open func initNotification() {
+        
+        
+    }
+    
+    
     
     /// 自定义导航栏
     func customNavBar() {
@@ -80,38 +110,38 @@ class FAN_BaseViewController: UIViewController {
     
     //MARK: - lazy
     // 左边的返回按钮
-    lazy var leftBtn: UIButton = {() -> UIButton in
+    open lazy var leftBtn: UIButton = {() -> UIButton in
         return UIButton(type: UIButton.ButtonType.custom)
     }()
     
-    lazy var rightBtn: UIButton = {() -> UIButton in
+    open lazy var rightBtn: UIButton = {() -> UIButton in
         return UIButton(type: UIButton.ButtonType.custom)
     }()
     
-    lazy var nvView: UIView = {() -> UIView in
+    open lazy var nvView: UIView = {() -> UIView in
         return UIView(frame: CGRect.zero)
     }()
     
-    lazy var nvStatuBarView: UIView = {() -> UIView in
+    open lazy var nvStatuBarView: UIView = {() -> UIView in
         return UIView(frame: CGRect.zero)
     }()
     
-    lazy var nvBarView: UIView = {() -> UIView in
+    open lazy var nvBarView: UIView = {() -> UIView in
         return UIView(frame: CGRect.zero)
     }()
     
-    lazy var nvMidBarView: UIView = {() -> UIView in
+    open lazy var nvMidBarView: UIView = {() -> UIView in
         return UIView(frame: CGRect.zero)
     }()
     
-    lazy var nvMidTitleLabel: UILabel = {() -> UILabel in
+    open lazy var nvMidTitleLabel: UILabel = {() -> UILabel in
         return UILabel(frame: CGRect.zero)
     }()
     
     
     //MARK: - setter
     
-    override var title: String?{
+    public override var title: String?{
         set{
             super.title = newValue
             self.nvMidTitleLabel.text = newValue
