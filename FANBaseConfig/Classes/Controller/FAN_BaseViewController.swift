@@ -45,6 +45,7 @@ open class FAN_BaseViewController: UIViewController {
         // 1.导航最大的背景View
         view.addSubview(self.nvView)
         self.nvView.frame = CGRect(x: 0, y: 0, width: SCREEN_WIDTH_FAN, height: STATUSBAR_NAVBAR_HEIGHT_FAN)
+        self.nvView.backgroundColor = UIColor.white
         
         // 2.添加状态栏
         self.nvView.addSubview(self.nvStatuBarView)
@@ -74,6 +75,7 @@ open class FAN_BaseViewController: UIViewController {
         // 7. 添加中间的titleLabel
         self.nvMidBarView.addSubview(self.nvMidTitleLabel)
         self.nvMidTitleLabel.frame = CGRect(x: 0, y: 0, width: self.nvMidBarView.width, height: self.nvMidBarView.height)
+        self.nvMidTitleLabel.textAlignment = NSTextAlignment.center
     }
     
     open func addChildView() {

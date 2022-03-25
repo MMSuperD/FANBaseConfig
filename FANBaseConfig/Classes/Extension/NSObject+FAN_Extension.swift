@@ -8,7 +8,7 @@
 import Foundation
 
 extension NSObject {
-    func objectFromString(ClassName:String) -> (NSObject) {
+    open func objectFromString(ClassName:String) -> (NSObject) {
         let cls: AnyClass = NSClassFromString(Bundle.nameplace + "." + ClassName)!
         let object = cls as! NSObject.Type
         let temp = object.init()

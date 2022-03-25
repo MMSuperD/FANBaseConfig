@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 extension UITextField {
-    func propertyValue(placehold:String? = "请输入值") {
+    public func propertyValue(placehold:String? = "请输入值") {
         placeholder = placehold
         borderStyle = .roundedRect
     }

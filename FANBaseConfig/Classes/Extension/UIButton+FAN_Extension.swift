@@ -14,7 +14,7 @@ extension UIButton {
     ///   - title: 标题
     ///   - bgColor: 背景颜色
     ///   - font: 字体的大小
-    convenience init(_ title: String, _ bgColor:UIColor, _ font: CGFloat) {
+    public  convenience init(_ title: String, _ bgColor:UIColor, _ font: CGFloat) {
         self.init()
         setTitle(title, for: UIControl.State.normal)
         backgroundColor = bgColor
@@ -31,7 +31,7 @@ extension UIButton {
     ///   - fontName: 字体名字
     ///   - fontSize: 字体大小
     /// - Returns: UIButton 对象
-    class func button_Fan(buttonType: ButtonType = .custom, backgroundColorStr: String = "#FFFFFF", title: String = NORMALSTRING_FAN, titleColorStr: String = "#333333", fontName: String = "", fontSize: Float = 15.0) -> UIButton {
+    public class func button_Fan(buttonType: ButtonType = .custom, backgroundColorStr: String = "#FFFFFF", title: String = NORMALSTRING_FAN, titleColorStr: String = "#333333", fontName: String = "", fontSize: Float = 15.0) -> UIButton {
         
         let button = UIButton(type: buttonType)
         button.backgroundColor = UIColor(hexString: backgroundColorStr)

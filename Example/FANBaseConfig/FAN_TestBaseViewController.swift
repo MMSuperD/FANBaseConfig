@@ -13,7 +13,8 @@ class FAN_TestBaseViewController: FAN_BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.view.backgroundColor = UIColor.red
         // Do any additional setup after loading the view.
     }
     
@@ -27,5 +28,10 @@ class FAN_TestBaseViewController: FAN_BaseViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        self.dismiss(animated: true)
+    }
 
 }

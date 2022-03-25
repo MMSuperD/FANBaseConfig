@@ -8,7 +8,7 @@
 import Foundation
 
 extension UILabel {
-    func setPropary_FAN(title: String?,color:String?,fontsize:Float = 15.0){
+    public func setPropary_FAN(title: String?,color:String?,fontsize:Float = 15.0){
         if title != nil {
             text = title
         }
@@ -18,7 +18,7 @@ extension UILabel {
         font = UIFont.systemFont(ofSize: CGFloat(fontsize))
     }
     
-    class func label_FAN(title: String = "我是默认字符串", color: String = "#333333", fontsize: Float = 15.0, fontName: String = "Helvetica-Bold" ) -> UILabel {
+    public class func label_FAN(title: String = "我是默认字符串", color: String = "#333333", fontsize: Float = 15.0, fontName: String = "Helvetica-Bold" ) -> UILabel {
         
         let label = UILabel()
         label.text = title

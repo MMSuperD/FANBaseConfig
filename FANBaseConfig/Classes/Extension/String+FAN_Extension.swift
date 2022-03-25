@@ -132,7 +132,7 @@ extension String {
 extension String{
     
     /// 正则匹配手机号
-    var isMobile_FAN: Bool {
+    public  var isMobile_FAN: Bool {
         /**
          * 手机号码
          * 移动：134 135 136 137 138 139 147 148 150 151 152 157 158 159  165 172 178 182 183 184 187 188 198
@@ -144,37 +144,37 @@ extension String{
     }
     
     /// 正则匹配用户身份证号15或18位
-    var isUserIdCard_FAN: Bool {
+    public var isUserIdCard_FAN: Bool {
         return isMatch_FAN("(^[0-9]{15}$)|([0-9]{17}([0-9]|X)$)")
     }
     
     /// 正则匹配用户密码6-12位数字和字母组合
-    var isPassword_FAN: Bool {
+    public var isPassword_FAN: Bool {
         return isMatch_FAN("^(?![0-9]+$)(?![a-zA-Z]+$)[a-zA-Z0-9]{6,12}")
     }
     
     /// 正则匹配URL
-    var isURL_FAN: Bool {
+    public  var isURL_FAN: Bool {
         return isMatch_FAN("^[0-9A-Za-z]{1,50}")
     }
     
     /// 正则匹配用户姓名,20位的中文或英文
-    var isUserName_FAN: Bool {
+    public var isUserName_FAN: Bool {
         return isMatch_FAN("^[a-zA-Z\\u4E00-\\u9FA5]{1,20}")
     }
     
     /// 正则匹配用户email
-    var isEmail_FAN: Bool {
+    public  var isEmail_FAN: Bool {
         return isMatch_FAN("[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}")
     }
     
     /// 判断是否都是数字
-    var isNumber_FAN: Bool {
+    public var isNumber_FAN: Bool {
         return isMatch_FAN("^[0-9]*$")
     }
     
     /// 只能输入由26个英文字母组成的字符串
-    var isLetter_FAN: Bool {
+    public var isLetter_FAN: Bool {
         return isMatch_FAN("^[A-Za-z]+$")
     }
     

@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 extension UIView {
     
-    var width: CGFloat {
+    public var width: CGFloat {
         get { return self.frame.size.width }
         set {
             var frame = self.frame
@@ -18,7 +18,7 @@ extension UIView {
         }
     }
 
-    var height: CGFloat {
+    public var height: CGFloat {
         get { return self.frame.size.height }
         set {
             var frame = self.frame
@@ -27,7 +27,7 @@ extension UIView {
         }
     }
     
-    var size: CGSize  {
+    public var size: CGSize  {
         get { return self.frame.size }
         set {
             var frame = self.frame
@@ -36,7 +36,7 @@ extension UIView {
         }
     }
 
-    var origin: CGPoint {
+    public var origin: CGPoint {
         get { return self.frame.origin }
         set {
             var frame = self.frame
@@ -45,7 +45,7 @@ extension UIView {
         }
     }
     
-    var x: CGFloat {
+    public var x: CGFloat {
         get { return self.frame.origin.x }
         set {
             var frame = self.frame
@@ -53,7 +53,7 @@ extension UIView {
             self.frame = frame
         }
     }
-    var y: CGFloat {
+    public var y: CGFloat {
         get { return self.frame.origin.y }
         set {
             var frame = self.frame
@@ -62,21 +62,21 @@ extension UIView {
         }
     }
     
-    var centerX: CGFloat {
+    public var centerX: CGFloat {
         get { return self.center.x }
         set {
             self.center = CGPoint(x: newValue, y: self.center.y)
         }
     }
     
-    var centerY: CGFloat {
+    public var centerY: CGFloat {
         get { return self.center.y }
         set {
             self.center = CGPoint(x: self.center.x, y: newValue)
         }
     }
     
-    var top : CGFloat {
+    public var top : CGFloat {
         get { return self.frame.origin.y }
         set {
             var frame = self.frame
@@ -85,7 +85,7 @@ extension UIView {
         }
     }
     
-    var bottom : CGFloat {
+    public var bottom : CGFloat {
         get { return frame.origin.y + frame.size.height }
         set {
             var frame = self.frame
@@ -94,7 +94,7 @@ extension UIView {
         }
     }
     
-    var right : CGFloat {
+    public var right : CGFloat {
         get { return self.frame.origin.x + self.frame.size.width }
         set {
             var frame = self.frame
@@ -103,7 +103,7 @@ extension UIView {
         }
     }
     
-    var left : CGFloat {
+    public var left : CGFloat {
         get { return self.frame.origin.x }
         set {
             var frame = self.frame
