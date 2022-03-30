@@ -20,17 +20,21 @@ open class FAN_BaseViewController: UIViewController {
 
     var nvColor = RandomColor()
     
-//    public init() {
-//        super.init()
-//        
-//        self.initData()
-//        self.initNotification()
-//    }
+    public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        
+        // 初始化数据
+        self.initData()
+        
+        // 初始化通知
+        self.initNotification()
+    }
     
-//    required public init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
+    required public init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
+
     open override func viewDidLoad() {
         super.viewDidLoad()
         addCustomView()
@@ -83,6 +87,15 @@ open class FAN_BaseViewController: UIViewController {
       
         
     }
+    /// 自定义导航栏
+    func customNavBar() {
+        
+    }
+    
+    //MARK: - 隐藏系统的导航栏
+    func hidSystemNavBar() {
+        self.navigationController?.navigationBar.isHidden = true
+    }
     
     open func initData() {
         
@@ -91,22 +104,12 @@ open class FAN_BaseViewController: UIViewController {
     
     open func initNotification() {
         
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(actionFAN_BaseViewControllerGlobalNotification(notification:)), name: NSNotification.Name(FAN_BaseViewControllerGlobalNotification), object: nil)
     }
     
-    
-    
-    /// 自定义导航栏
-    func customNavBar() {
-        
-        
-        
-        
-    }
-    
-    //MARK: - 隐藏系统的导航栏
-    func hidSystemNavBar() {
-        self.navigationController?.navigationBar.isHidden = true
+    //MARK: - 监听响应方法
+    @objc func actionFAN_BaseViewControllerGlobalNotification(notification: Notification) -> Void {
+        print("actionFAN_BaseViewControllerGlobalNotification 被执行了")
     }
     
     
