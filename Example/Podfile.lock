@@ -1,16 +1,24 @@
 PODS:
-  - FANBaseConfig (0.1.0)
+  - FANBaseConfig (0.1.0):
+    - SnapKit (>= 5.0.0)
+  - SnapKit (5.0.1)
 
 DEPENDENCIES:
   - FANBaseConfig (from `../`)
+  - SnapKit
+
+SPEC REPOS:
+  trunk:
+    - SnapKit
 
 EXTERNAL SOURCES:
   FANBaseConfig:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FANBaseConfig: 1e45e3ff23ab6351b2a65ca80a00d14d88ec1355
+  FANBaseConfig: bcc21767c6792df80c33bccea658410442ed2b8b
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 4103a3d3a3d98ad1feb8330b7e6605612295f9d3
+PODFILE CHECKSUM: 6b660ff17cb0eddb2af0a34cb7285dd011d9e4a9
 
 COCOAPODS: 1.10.2

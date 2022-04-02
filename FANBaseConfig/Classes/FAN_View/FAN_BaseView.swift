@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FAN_BaseView: UIView {
+open class FAN_BaseView: UIView {
     
     var isDidAddChildView: Bool = false
     
@@ -46,6 +46,13 @@ class FAN_BaseView: UIView {
     /// 添加子空间
     /// - Returns: Void
     open func addChildView() -> Void {
+        
+    }
+    
+    
+    /// 添加约束
+    /// - Returns: Void
+    open func addSnp() -> Void{
         
     }
 

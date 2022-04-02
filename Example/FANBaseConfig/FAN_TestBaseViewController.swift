@@ -11,11 +11,27 @@ import FANBaseConfig
 
 class FAN_TestBaseViewController: FAN_BaseViewController {
 
+    var testView: FAN_TestBaseView = FAN_TestBaseView(frame: CGRect.zero)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.red
-        // Do any additional setup after loading the view.
+        
+        addChildView()
+    }
+    
+    override func addChildView() {
+        
+        self.testView.backgroundColor = RandomColor_FAN()
+        view.addSubview(self.testView)
+        self.testView.radius_FAN = 100
+        self.testView.snp.makeConstraints { make in
+            make.size.equalTo(CGSize(width: 200, height: 200))
+            make.center.equalTo(self.view)
+        }
+        
+        
     }
     
 

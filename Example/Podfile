@@ -4,10 +4,12 @@ platform :ios, '11.0'
 
 target 'FANBaseConfig_Example' do
   pod 'FANBaseConfig', :path => '../'
+  
+  pod 'SnapKit'
 
   target 'FANBaseConfig_Tests' do
     inherit! :search_paths
-
+    
     
   end
 end

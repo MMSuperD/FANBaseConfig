@@ -10,6 +10,8 @@
 		318066A927EBE33400EEE180 /* FAN_TestBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318066A827EBE33400EEE180 /* FAN_TestBaseViewController.swift */; };
 		31C7E9B727F50C8D0079429D /* FAN_TestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C7E9B627F50C8D0079429D /* FAN_TestObject.swift */; };
 		31C7E9B927F511620079429D /* FAN_TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C7E9B827F511620079429D /* FAN_TestView.swift */; };
+		31C7E9BE27F68A690079429D /* FAN_TestBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C7E9BD27F68A690079429D /* FAN_TestBaseView.swift */; };
+		31C7E9C127F68D2C0079429D /* FAN_CommenHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C7E9C027F68D2C0079429D /* FAN_CommenHeader.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 		318066A827EBE33400EEE180 /* FAN_TestBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAN_TestBaseViewController.swift; sourceTree = "<group>"; };
 		31C7E9B627F50C8D0079429D /* FAN_TestObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAN_TestObject.swift; sourceTree = "<group>"; };
 		31C7E9B827F511620079429D /* FAN_TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAN_TestView.swift; sourceTree = "<group>"; };
+		31C7E9BD27F68A690079429D /* FAN_TestBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAN_TestBaseView.swift; sourceTree = "<group>"; };
+		31C7E9C027F68D2C0079429D /* FAN_CommenHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAN_CommenHeader.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* FANBaseConfig_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FANBaseConfig_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +114,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				31C7E9BD27F68A690079429D /* FAN_TestBaseView.swift */,
 				31C7E9B627F50C8D0079429D /* FAN_TestObject.swift */,
 				31C7E9B827F511620079429D /* FAN_TestView.swift */,
 				318066A827EBE33400EEE180 /* FAN_TestBaseViewController.swift */,
@@ -117,6 +122,7 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				31C7E9C027F68D2C0079429D /* FAN_CommenHeader.swift */,
 			);
 			name = "Example for FANBaseConfig";
 			path = FANBaseConfig;
@@ -280,10 +286,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-FANBaseConfig_Example/Pods-FANBaseConfig_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FANBaseConfig/FANBaseConfig.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FANBaseConfig.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -342,8 +350,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				31C7E9BE27F68A690079429D /* FAN_TestBaseView.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				31C7E9B727F50C8D0079429D /* FAN_TestObject.swift in Sources */,
+				31C7E9C127F68D2C0079429D /* FAN_CommenHeader.swift in Sources */,
 				31C7E9B927F511620079429D /* FAN_TestView.swift in Sources */,
 				318066A927EBE33400EEE180 /* FAN_TestBaseViewController.swift in Sources */,
 			);

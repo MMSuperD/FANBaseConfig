@@ -18,7 +18,7 @@ import UIKit
 
 open class FAN_BaseViewController: UIViewController {
 
-    var nvColor = RandomColor()
+    var nvColor = RandomColor_FAN()
     
     public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -78,7 +78,7 @@ open class FAN_BaseViewController: UIViewController {
         
         // 7. 添加中间的titleLabel
         self.nvMidBarView.addSubview(self.nvMidTitleLabel)
-        self.nvMidTitleLabel.frame = CGRect(x: 0, y: 0, width: self.nvMidBarView.width, height: self.nvMidBarView.height)
+        self.nvMidTitleLabel.frame = CGRect(x: 0, y: 0, width: self.nvMidBarView.width_FAN, height: self.nvMidBarView.height_FAN)
         self.nvMidTitleLabel.textAlignment = NSTextAlignment.center
     }
     
