@@ -9,6 +9,7 @@ import UIKit
 
 extension UIButton {
     
+    //MARK: OC
     /// 这个是UIButton的构造方法
     /// - Parameters:
     ///   - title: 标题
@@ -40,5 +41,24 @@ extension UIButton {
         button.setTitleColor(UIColor(hexString: titleColorStr), for: UIControl.State.normal)
         return button
     }
+    
+    //MARK: Swift
+    
+    public class FAN_Button: FAN_View{
+        
+        var button: UIButton
+        
+        init(_ button: UIButton) {
+            self.button = button
+            super.init(button)
+        }
+    }
+    
+    
+    public var button: FAN_View{
+        return FAN_View(self)
+    }
+    
+    
 
 }

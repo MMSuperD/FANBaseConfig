@@ -12,6 +12,7 @@ import FANBaseConfig
 class FAN_TestBaseViewController: FAN_BaseViewController {
 
     var testView: FAN_TestBaseView = FAN_TestBaseView(frame: CGRect.zero)
+    var textLabel: UILabel = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +32,13 @@ class FAN_TestBaseViewController: FAN_BaseViewController {
             make.center.equalTo(self.view)
         }
         
-        
+    
+        view.addSubview(self.textLabel)
+        self.textLabel.label.textColor().title("我很好").font("dfsf", 13.0)
+        self.textLabel.snp.makeConstraints { make in
+            make.top.equalTo(self.testView.snp.bottom).offset(20)
+            make.centerX.equalTo(self.view)
+        }
     }
     
 

@@ -12,12 +12,16 @@ class FAN_TestView: UIView {
 
     var title: String
     
+    var label: UILabel?
+    
     convenience init(frame: CGRect, title: String) {
        
         // 这里必须是 self 调用自己的初始化方法
         self.init(frame: frame)
         
         self.title = title;
+        
+        
     }
   
     override init(frame: CGRect) {

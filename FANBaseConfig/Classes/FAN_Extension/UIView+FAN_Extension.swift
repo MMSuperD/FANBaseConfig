@@ -8,7 +8,8 @@
 import Foundation
 import UIKit
 extension UIView {
-    
+   
+    // MARK: OC
     public var width_FAN: CGFloat {
         get { return self.frame.size.width }
         set {
@@ -172,5 +173,99 @@ extension UIView {
         }
     }
     
+    // MARK: Swift
+    public class FAN_View {
+        
+        var view: UIView?
+        init(_ view: UIView) {
+            self.view = view
+        }
+        
+        public func x(_ x: CGFloat) -> Self{
+            
+            self.view?.frame.origin.x = x
+            
+            return self
+        }
+        
+        public func y(_ y: CGFloat) -> Self{
+            
+            self.view?.frame.origin.y = y
+            
+            return self
+        }
+        
+        public func width(_ width: CGFloat) -> Self{
+            
+            self.view?.frame.size.width = width
+            
+            return self
+        }
+        
+        public func height(_ height: CGFloat) -> Self{
+            
+            self.view?.frame.size.height = height
+            
+            return self
+        }
+        
+        public func size(_ size: CGSize) -> Self{
+            
+            self.view?.frame.size = size
+            
+            return self
+        }
+        
+        public func origin(_ origin: CGPoint) -> Self{
+            
+            self.view?.frame.origin = origin
+            
+            return self
+        }
+        
+        public func centerX(_ centerX: CGFloat) -> Self{
+            
+            self.view?.center.x = centerX
+            
+            return self
+        }
+        
+        public func centerY(_ centerY: CGFloat) -> Self{
+            
+            self.view?.center.y = centerY
+            
+            return self
+        }
+        
+        
+        public func radius(_ radius: CGFloat) -> Self{
+            
+            self.view?.layer.cornerRadius = radius
+            self.view?.layer.masksToBounds = true
+            
+            return self
+        }
+
+        public func borderColor(_ borderColor: UIColor) -> Self{
+            
+            self.view?.layer.borderColor = borderColor.cgColor
+                
+            return self
+        }
+        
+        public func borderWidth(_ borderWidth: CGFloat) -> Self{
+            
+            self.view?.layer.borderWidth = borderWidth
+            return self
+        }
+
+    }
+    
+    
+    public var view: FAN_View{
+        return FAN_View(self)
+
+    }
+
     
 }
