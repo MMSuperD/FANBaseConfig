@@ -1,14 +1,14 @@
 //
-//  FAN_BaseView.swift
+//  FAN_BaseControl.swift
 //  FANBaseConfig
 //
-//  Created by 王丹 on 2022/3/31.
+//  Created by 王丹 on 2022/7/26.
 //
 
 import UIKit
 
-open class FAN_BaseView: UIView {
-    
+open class FAN_BaseControl: UIControl {
+
     var isDidAddChildView: Bool = false
     
     var dataObject: AnyObject?
@@ -29,6 +29,7 @@ open class FAN_BaseView: UIView {
     convenience init(frame: CGRect,dataObject: AnyObject = ["mmd":"mmd"] as AnyObject) {
         self.init(frame: frame)
         self.dataObject = dataObject
+        
     }
     
     
@@ -39,6 +40,7 @@ open class FAN_BaseView: UIView {
         if !isDidAddChildView {
             self.addChildView()
             self.isDidAddChildView = true
+            self.addTarget(self, action: #selector(clickControl(control:)), for: UIControl.Event.touchUpInside)
         }
     }
     
@@ -56,6 +58,12 @@ open class FAN_BaseView: UIView {
         
     }
     
+    @objc open func clickControl(control: UIControl) -> Void {
+        
+        
+        
+    }
+
     public lazy var titleLabel = {
         UILabel.label_FAN()
     }()
@@ -63,5 +71,4 @@ open class FAN_BaseView: UIView {
     public lazy var defaultBtn = {
         UIButton("default", UIColor.randomColor(), 15)
     }()
-
 }

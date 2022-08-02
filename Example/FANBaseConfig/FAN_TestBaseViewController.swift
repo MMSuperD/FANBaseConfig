@@ -33,12 +33,12 @@ class FAN_TestBaseViewController: FAN_BaseViewController {
         }
         
     
-        view.addSubview(self.textLabel)
-        self.textLabel.label.textColor().title("我很好").font("dfsf", 13.0)
-        self.textLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.testView.snp.bottom).offset(20)
-            make.centerX.equalTo(self.view)
-        }
+//        view.addSubview(self.textLabel)
+//        self.textLabel.label.textColor().title("我很好").font("dfsf", 13.0)
+//        self.textLabel.snp.makeConstraints { make in
+//            make.top.equalTo(self.testView.snp.bottom).offset(20)
+//            make.centerX.equalTo(self.view)
+//        }
     }
     
 

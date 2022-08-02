@@ -38,6 +38,9 @@ open class FAN_BaseViewController: UIViewController {
     open override func viewDidLoad() {
         super.viewDidLoad()
         addCustomView()
+        
+       // 初始化颜色
+        view.backgroundColor = UIColor.white;
     }
     
   /// 非必要情况不要自定义这个方法

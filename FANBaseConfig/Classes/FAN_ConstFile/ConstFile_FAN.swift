@@ -97,3 +97,6 @@ public func RandomColor_FAN() -> (UIColor) {
 public func I(_ imageName:String) -> (UIImage) {
     return UIImage.init(named: imageName) ?? UIImage.init()
 }
+
+//TODO: 常用回调函数
+public typealias OneParamBlock_FAN = (_ param: Any) -> Void

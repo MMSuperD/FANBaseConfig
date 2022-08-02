@@ -80,4 +80,9 @@ extension UIColor {
     public static let background = UIColor(hex: 0xf4f5f7)
     public static let systemGray = UIColor(hex: 0xe2e2e2)
     
+    public static func randomColor() -> UIColor {
+        
+        return UIColor(red: CGFloat.random(), green: CGFloat.random(), blue: CGFloat.random(), alpha: 1)
+    }
+    
 }

@@ -15,7 +15,7 @@ enum NoDataViewType_FAN: Int {
 class FAN_NoDataView: FAN_BaseView {
     
     let iconImageV: UIImageView = UIImageView(frame: CGRect.zero)
-    let titleLabel: UILabel = UILabel.label_FAN()
+//    let titleLabel: UILabel = UILabel.label_FAN()
     var noDataViewType: NoDataViewType_FAN?
     
     convenience init(frame: CGRect, type: NoDataViewType_FAN = .normal_one) {

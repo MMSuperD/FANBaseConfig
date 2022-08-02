@@ -184,3 +184,10 @@ extension String{
         return isMatch
     }
 }
+
+extension String {
+    
+    public var classForCoder: AnyClass {
+        return NSClassFromString(Bundle.nameplace + "." + self) ?? NSString.classForCoder()
+    }
+}
