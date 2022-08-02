@@ -66,8 +66,6 @@ open class FAN_BaseTableViewController: FAN_BaseViewController,UITableViewDelega
         return tv
     }()
     
-    
-    
 }
 
 extension FAN_BaseTableViewController{
