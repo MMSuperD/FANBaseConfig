@@ -59,7 +59,7 @@ open class FAN_BaseTableViewController: FAN_BaseViewController,UITableViewDelega
         tv.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: "UITableViewCell");
         tv.delegate = self
         tv.dataSource = self
-        tv.rowHeight = UITableView.automaticDimension
+//        tv.rowHeight = UITableView.automaticDimension
         tv.estimatedRowHeight = 40
         tv.tableHeaderView = UIView()
         tv.tableFooterView = UIView()

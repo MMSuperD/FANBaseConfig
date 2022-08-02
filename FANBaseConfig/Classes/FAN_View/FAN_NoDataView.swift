@@ -18,14 +18,19 @@ class FAN_NoDataView: FAN_BaseView {
 //    let titleLabel: UILabel = UILabel.label_FAN()
     var noDataViewType: NoDataViewType_FAN?
     
+        
     convenience init(frame: CGRect, type: NoDataViewType_FAN = .normal_one) {
+      
         self.init(frame: frame)
-        self.noDataViewType = noDataViewType;
+        self.noDataViewType = type;
         
         self.addChildView()
         self.addSnp()
         
     }
+    
+    
+    
     override func addChildView() {
         self.addSubview(self.iconImageV)
         self.addSubview(self.titleLabel)

@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,12 +23,14 @@ class ViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        let vc: FAN_TestBaseViewController = FAN_TestBaseViewController()
+//        let vc: FAN_TestBaseViewController = FAN_TestBaseViewController()
+//        
+//        vc.title = "我很好"
+//        vc.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+//        self.present(vc, animated: true)
         
-        vc.title = "我很好"
-        vc.modalPresentationStyle = UIModalPresentationStyle.fullScreen
-        self.present(vc, animated: true)
         
+
         
         
         
