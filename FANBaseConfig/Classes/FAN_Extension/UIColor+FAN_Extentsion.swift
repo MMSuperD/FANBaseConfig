@@ -81,8 +81,8 @@ extension UIColor {
     public static let systemGray = UIColor(hex: 0xe2e2e2)
     
     public static func randomColor() -> UIColor {
-        
-        return UIColor(red: CGFloat.random(), green: CGFloat.random(), blue: CGFloat.random(), alpha: 1)
+                
+        return UIColor(red: CGFloat.random(in: 0..<255), green: CGFloat.random(in: 0..<255), blue: CGFloat.random(in: 0..<255), alpha: 1)
     }
     
 }
