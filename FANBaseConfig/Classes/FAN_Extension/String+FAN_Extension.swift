@@ -187,7 +187,13 @@ extension String{
 
 extension String {
     
+    public var classForCoder_FAN: AnyClass {
+        
+        return NSClassFromString("FANBaseConfig" + "." + self) ?? NSString.classForCoder()
+    }
+    
     public var classForCoder: AnyClass {
-        return NSClassFromString(Bundle.nameplace + "." + self) ?? NSString.classForCoder()
+        
+        return NSClassFromString(Bundle.namespace_FAN() + "." + self) ?? NSString.classForCoder()
     }
 }

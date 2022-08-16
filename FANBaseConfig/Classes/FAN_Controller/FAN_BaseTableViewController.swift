@@ -18,7 +18,7 @@ open class FAN_BaseTableViewController: FAN_BaseViewController,UITableViewDelega
     
     
     //MARK: -public
-    public func tableview(registerCellArray:Array<String>, cellReuseIdentifier:Array<String>?) -> Void {
+    public func tableView(registerCellArray:Array<String>, cellReuseIdentifier:Array<String>?) -> Void {
                 
         for i in 0..<registerCellArray.count {
             
@@ -37,6 +37,23 @@ open class FAN_BaseTableViewController: FAN_BaseViewController,UITableViewDelega
             }
          
         }
+    }
+    
+    /// register cell
+    /// - Parameter registerCellDict: key: namespace  value:  class string for this namespace
+    /// - Returns: Void
+    public func tableView(registerCellDict:Dictionary<String, [String]>) -> Void {
+                
+        var clsStr: String? = nil
+        for (key, value) in registerCellDict {
+            
+            // key 表示 namespace value 表示一个数字
+            for i in 0..<value.count {
+                clsStr = key + "." + value[i]
+                self.tableView.register(NSClassFromString(clsStr!), forCellReuseIdentifier: clsStr!)
+            }
+        }
+        
     }
         
     
@@ -63,6 +80,7 @@ open class FAN_BaseTableViewController: FAN_BaseViewController,UITableViewDelega
         tv.estimatedRowHeight = 40
         tv.tableHeaderView = UIView()
         tv.tableFooterView = UIView()
+        tv.separatorStyle = .none
         return tv
     }()
     
@@ -81,6 +99,7 @@ extension FAN_BaseTableViewController{
         
         cell.backgroundColor = UIColor.randomColor()
         cell.selectionStyle = .none
+        cell.textLabel?.text = indexPath.row.description
         
         return cell
     }
@@ -92,7 +111,7 @@ extension FAN_BaseTableViewController{
     
     
     open func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        CGFloat(0.05)
+        CGFloat.leastNormalMagnitude
     }
     
     open func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -100,7 +119,7 @@ extension FAN_BaseTableViewController{
     }
     
     open func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        CGFloat(0.05)
+        CGFloat.leastNormalMagnitude
     }
     
     open func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {

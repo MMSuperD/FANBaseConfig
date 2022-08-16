@@ -27,6 +27,7 @@ open class FAN_BaseTableViewCell: UITableViewCell,FAN_BaseTableViewCellDataProto
     
     public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        initData()
         addChildView()
     }
     
@@ -46,6 +47,10 @@ open class FAN_BaseTableViewCell: UITableViewCell,FAN_BaseTableViewCellDataProto
     }
     
     open func addChildView() -> Void {
+        
+    }
+    
+    open func initData() -> Void {
         
     }
 

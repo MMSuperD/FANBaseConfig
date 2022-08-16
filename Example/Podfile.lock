@@ -1,5 +1,7 @@
 PODS:
-  - FANBaseConfig (0.1.0):
+  - Alamofire (5.6.2)
+  - FANBaseConfig (0.1.1):
+    - Alamofire (>= 5.6.2)
     - SnapKit (>= 5.0.0)
   - SnapKit (5.6.0)
 
@@ -9,6 +11,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - SnapKit
 
 EXTERNAL SOURCES:
@@ -16,7 +19,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FANBaseConfig: bcc21767c6792df80c33bccea658410442ed2b8b
+  Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
+  FANBaseConfig: cf0d197ce71b88932f742150ea77cb760d0c6e42
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
 PODFILE CHECKSUM: c71ccb5713f2376b9d6e3d57028e79f943d5aa6e

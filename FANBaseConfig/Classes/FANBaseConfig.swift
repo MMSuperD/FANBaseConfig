@@ -8,3 +8,4 @@
 import Foundation
 
 @_exported import SnapKit
+@_exported import Alamofire

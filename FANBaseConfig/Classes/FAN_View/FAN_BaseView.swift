@@ -37,9 +37,18 @@ open class FAN_BaseView: UIView {
     func public_fun1() -> Void {
         
         if !isDidAddChildView {
+            
+            self.initData()
             self.addChildView()
             self.isDidAddChildView = true
         }
+    }
+    
+    
+    /// init data
+    /// - Returns: Void
+    open func initData() -> Void {
+        
     }
     
     

@@ -9,7 +9,7 @@ import Foundation
 
 extension Bundle {
     //这个是计算下型属性
-   open class var nameplace : String {
+   open class var nameplace : String  {
         
         get {
             return Bundle.main.infoDictionary?["CFBundleName"] as? String ?? ""
@@ -17,8 +17,15 @@ extension Bundle {
         
     }
     
-    open class func namespace() -> (String) {
+    open class func namespace_FAN() -> (String) {
+        
+        let hh = FAN_BaseTableViewCell()
+        
         let namespace = Bundle.main.infoDictionary!["CFBundleExecutable"] as! String
         return namespace
+    }
+    
+    open class func namespace_FAN(currentStr: String) -> String {
+        return currentStr
     }
 }
