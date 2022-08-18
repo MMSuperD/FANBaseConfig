@@ -110,6 +110,13 @@ open class FAN_BaseViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(actionFAN_BaseViewControllerGlobalNotification(notification:)), name: NSNotification.Name(FAN_BaseViewControllerGlobalNotification), object: nil)
     }
     
+    
+    /// request data
+    open func loadData(){
+        
+        
+    }
+    
     //MARK: - 监听响应方法
     @objc func actionFAN_BaseViewControllerGlobalNotification(notification: Notification) -> Void {
         print("actionFAN_BaseViewControllerGlobalNotification 被执行了")

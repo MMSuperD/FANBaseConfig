@@ -18,6 +18,7 @@ public protocol FAN_BaseTableViewCellDataProtocol {
 
 open class FAN_BaseTableViewCell: UITableViewCell,FAN_BaseTableViewCellDataProtocol {
     
+    public var _data: Any?
     open var data: Any?
 
     open weak var currentVc: UIViewController?
@@ -27,6 +28,7 @@ open class FAN_BaseTableViewCell: UITableViewCell,FAN_BaseTableViewCellDataProto
     
     public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        addPublicChildView()
         initData()
         addChildView()
     }
@@ -51,6 +53,11 @@ open class FAN_BaseTableViewCell: UITableViewCell,FAN_BaseTableViewCellDataProto
     }
     
     open func initData() -> Void {
+        
+    }
+    
+    open func addPublicChildView() {
+        
         
     }
 

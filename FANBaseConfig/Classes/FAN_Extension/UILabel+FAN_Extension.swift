@@ -21,7 +21,7 @@ extension UILabel {
         font = UIFont.systemFont(ofSize: CGFloat(fontsize))
     }
     
-    public class func label_FAN(title: String = "我是默认字符串", color: String = NORMALCOLORSTRING_FAN, fontsize: CGFloat = NORMALFONT_FAN, fontName: String = NORMALFONTNAME_FAN ) -> UILabel {
+    public class func label_FAN(title: String = "我是默认字符串", color: String = NORMALCOLORSTRING_FAN, fontsize: CGFloat = CGFloat(NORMALFONT_FAN), fontName: String = NORMALFONTNAME_FAN ) -> UILabel {
         
         let label = UILabel()
         label.text = title
@@ -49,13 +49,13 @@ extension UILabel {
         
        
         @discardableResult
-        public func fontSize(_ fontSize: CGFloat = NORMALFONT_FAN) -> Self {
+        public func fontSize(_ fontSize: CGFloat = CGFloat(NORMALFONT_FAN)) -> Self {
             self.label.font = UIFont.systemFont(ofSize: fontSize);
             return self
         }
         
         @discardableResult
-        public func font(_ fontName: String = "", _ fontSize: CGFloat = NORMALFONT_FAN) -> Self {
+        public func font(_ fontName: String = "", _ fontSize: CGFloat = CGFloat(NORMALFONT_FAN)) -> Self {
             self.label.font = UIFont(name: fontName, size: fontSize)
             return self
         }

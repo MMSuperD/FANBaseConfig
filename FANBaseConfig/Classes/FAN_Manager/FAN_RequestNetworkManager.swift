@@ -82,8 +82,7 @@ class FAN_RequestNetworkManager {
         }
         
         return paramsDic
-        
-        
+
     }
     
 }

@@ -7,15 +7,15 @@
 
 import UIKit
 
-class FAN_BaseNavigationController: UINavigationController {
+open class FAN_BaseNavigationController: UINavigationController {
 
-    override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
 
 
     }
     
-    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+    open override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         
         if self.viewControllers.count > 0 {
             viewController.hidesBottomBarWhenPushed = true
