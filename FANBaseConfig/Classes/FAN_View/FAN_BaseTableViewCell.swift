@@ -20,7 +20,7 @@ open class FAN_BaseTableViewCell: UITableViewCell,FAN_BaseTableViewCellDataProto
     
     public var _data: Any?
     open var data: Any?
-
+    
     open weak var currentVc: UIViewController?
     
     open var backBlock: OneParamBlock_FAN?
@@ -57,6 +57,11 @@ open class FAN_BaseTableViewCell: UITableViewCell,FAN_BaseTableViewCellDataProto
     }
     
     open func addPublicChildView() {
+        
+        
+    }
+    
+    open func refreshUI() {
         
         
     }
