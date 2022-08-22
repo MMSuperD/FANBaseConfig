@@ -100,6 +100,12 @@ open class FAN_BaseViewController: UIViewController {
         
     }
     
+    
+    /// 刷新界面
+    open func refreshUI() {
+        
+    }
+    
     //MARK: - 隐藏系统的导航栏
     func hidSystemNavBar() {
         self.navigationController?.navigationBar.isHidden = true

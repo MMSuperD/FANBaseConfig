@@ -13,6 +13,10 @@ open class FAN_BaseControl: UIControl {
     
     var dataObject: AnyObject?
     
+    public var _data: Any?
+    
+    open var data: Any?
+    
 
     public override init(frame: CGRect){
         super.init(frame: frame)
@@ -64,6 +68,12 @@ open class FAN_BaseControl: UIControl {
     open func addSnp() -> Void{
         
     }
+    
+    /// refresh View
+    open func refreshUI() {
+        
+    }
+
     
     @objc open func clickControl(control: UIControl) -> Void {
         
