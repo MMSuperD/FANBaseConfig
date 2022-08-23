@@ -9,6 +9,17 @@ import UIKit
 
 open class FAN_BaseCollectionViewCell: UICollectionViewCell {
     
+    
+    public var _data: Any?
+    open var data: Any?
+    
+    
+    /// 这个是 从用cell 的标识符
+    public static var identifier: String {
+        return self.description()
+    }
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -33,6 +44,10 @@ open class FAN_BaseCollectionViewCell: UICollectionViewCell {
         self.titleLabel.snp.makeConstraints { make in
             make.center.equalToSuperview()
         }
+        
+    }
+    
+    open func refreshUI() {
         
     }
     

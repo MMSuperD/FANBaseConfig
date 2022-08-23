@@ -14,9 +14,14 @@ extension UILabel {
     public func setPropary_FAN(title: String?,color:String?,fontsize:Float = 15.0){
         if title != nil {
             text = title
+        } else {
+            text = "我是默认字符串"
         }
         if color != nil {
+            textColor = UIColor(hexString: color!)
+        } else {
             textColor = UIColor.black
+
         }
         font = UIFont.systemFont(ofSize: CGFloat(fontsize))
     }

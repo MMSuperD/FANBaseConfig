@@ -13,6 +13,10 @@ open class FAN_BaseControl: UIControl {
     
     var dataObject: AnyObject?
     
+    public var _data: Any?
+    
+    open var data: Any?
+    
 
     public override init(frame: CGRect){
         super.init(frame: frame)
@@ -38,12 +42,19 @@ open class FAN_BaseControl: UIControl {
     func public_fun1() -> Void {
         
         if !isDidAddChildView {
+            self.initData()
             self.addChildView()
             self.isDidAddChildView = true
             self.addTarget(self, action: #selector(clickControl(control:)), for: UIControl.Event.touchUpInside)
         }
     }
     
+    
+    /// 初始化
+    /// - Returns: Void
+    open func initData() -> Void {
+        
+    }
     
     /// 添加子空间
     /// - Returns: Void
@@ -57,6 +68,12 @@ open class FAN_BaseControl: UIControl {
     open func addSnp() -> Void{
         
     }
+    
+    /// refresh View
+    open func refreshUI() {
+        
+    }
+
     
     @objc open func clickControl(control: UIControl) -> Void {
         

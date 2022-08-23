@@ -13,6 +13,10 @@ open class FAN_BaseView: UIView {
     
     var dataObject: AnyObject?
     
+    public var _data: Any?
+    
+    open var data: Any?
+    
 
     public override init(frame: CGRect){
         super.init(frame: frame)
@@ -62,6 +66,12 @@ open class FAN_BaseView: UIView {
     /// 添加约束
     /// - Returns: Void
     open func addSnp() -> Void{
+        
+    }
+    
+    
+    /// refresh View
+    open func refreshUI() {
         
     }
     

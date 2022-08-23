@@ -43,6 +43,11 @@ open class FAN_BaseViewController: UIViewController {
         view.backgroundColor = UIColor.white;
     }
     
+    open override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        hidSystemNavBar()
+    }
+    
   /// 非必要情况不要自定义这个方法
     open func addCustomView() {
         // 1.隐藏系统的导航栏
@@ -92,6 +97,12 @@ open class FAN_BaseViewController: UIViewController {
     }
     /// 自定义导航栏
     func customNavBar() {
+        
+    }
+    
+    
+    /// 刷新界面
+    open func refreshUI() {
         
     }
     
