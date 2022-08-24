@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (5.6.2)
-  - FANBaseConfig (0.1.4):
+  - FANBaseConfig (0.1.5):
     - Alamofire (>= 5.6.2)
     - SnapKit (>= 5.0.0)
   - SnapKit (5.6.0)
@@ -20,9 +20,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
-  FANBaseConfig: 4cbd8db0e997f0736e7c0d12b6920605dd97c10e
+  FANBaseConfig: 3ad0066a5ecf91b5d7bc55898b67c3a294b34689
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
 PODFILE CHECKSUM: c71ccb5713f2376b9d6e3d57028e79f943d5aa6e
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.11.3
