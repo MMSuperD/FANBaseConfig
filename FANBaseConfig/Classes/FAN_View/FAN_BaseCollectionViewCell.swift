@@ -14,13 +14,13 @@ open class FAN_BaseCollectionViewCell: UICollectionViewCell {
     open var data: Any?
     
     
-    /// 这个是 从用cell 的标识符
-    public static var identifier: String {
-        return self.description()
-    }
+//    /// 这个是 从用cell 的标识符
+//    public static var identifier: String {
+//        return self.description()
+//    }
     
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         
         initData()

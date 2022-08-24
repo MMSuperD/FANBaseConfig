@@ -90,3 +90,4 @@ extension UILabel {
         return FAN_Label(self)
     }
 }
+
